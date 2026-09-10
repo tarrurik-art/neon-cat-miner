@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEON CAT MINER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="crosshair">+</div>
+
+    <div id="menu">
+        <h1>😺 NEON CAT MINER</h1>
+        <p>Voxel Survival • Creative • Multiplayer</p>
+        <button id="playButton">PLAY</button>
+    </div>
+
+    <div id="hud">
+        <div id="info">
+            <b>NEON CAT MINER</b><br>
+            WASD = Move<br>
+            Mouse = Look<br>
+            Left click = Break<br>
+            Right click = Place<br>
+            1-5 = Select block
+        </div>
+
+        <div id="hotbar">
+            <div class="slot selected" data-block="1">🟩</div>
+            <div class="slot" data-block="2">🟫</div>
+            <div class="slot" data-block="3">⬜</div>
+            <div class="slot" data-block="4">🟦</div>
+            <div class="slot" data-block="5">🟪</div>
+        </div>
+    </div>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+        }
+    }
+    </script>
+
+    <script type="module" src="game.js"></script>
+</body>
+</html>
