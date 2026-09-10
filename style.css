@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #000;
+    font-family: Arial, sans-serif;
+}
+
+canvas {
+    display: block;
+}
+
+#menu {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    text-align: center;
+}
+
+#menu h1 {
+    font-size: 52px;
+    margin: 0 0 10px;
+    text-shadow:
+        0 0 10px #00ffff,
+        0 0 25px #ff00ff;
+}
+
+#menu p {
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+#playButton {
+    border: 2px solid #00ffff;
+    background: #111;
+    color: #00ffff;
+
+    padding: 15px 50px;
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+    border-radius: 8px;
+
+    box-shadow: 0 0 20px #00ffff;
+}
+
+#playButton:hover {
+    background: #00ffff;
+    color: #000;
+}
+
+#crosshair {
+    display: none;
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+
+    z-index: 5;
+
+    pointer-events: none;
+
+    text-shadow: 0 0 5px black;
+}
+
+#hud {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+    z-index: 4;
+}
+
+#info {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+
+    padding: 12px;
+
+    color: white;
+    background: rgba(0, 0, 0, 0.55);
+
+    border-radius: 8px;
+
+    font-size: 14px;
+}
+
+#hotbar {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 5px;
+}
+
+.slot {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+
+    background: rgba(20, 20, 20, 0.8);
+
+    border: 2px solid #555;
+    border-radius: 6px;
+}
+
+.slot.selected {
+    border-color: #00ffff;
+    box-shadow: 0 0 12px #00ffff;
+}
